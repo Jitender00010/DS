@@ -14,7 +14,7 @@ class TowNumberSum {
         }
         return new int[0];
     }
-    public static void main(String[] args) { // test
+    public static void main(String[] args) {
 
         int[] ar = {1,3,5};
         System.out.println(twoNumberSum(ar,3));
