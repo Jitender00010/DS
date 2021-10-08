@@ -1,4 +1,7 @@
 package com.ds.strings.anagram;
+
+import java.util.ArrayList;
+
 /**
  * Print all pairs of anagrams in a given array of strings
  * Difficulty Level : Medium
@@ -14,7 +17,7 @@ package com.ds.strings.anagram;
 class PrintPairAnagram {
 
     public static void main(String[] args) {
-        String[] ar ={"geeksquiz", "geeksforgeeks", "abcd", "forgeeksgeeks", "zuiqkeegs"};
+        String[] ar ={"geeksquiz", "geeksforgeeks", "abcd", "forgeeksgeeks", "zuiqkeegs","geeskforgeesk"};
 
         search(ar);
     }
@@ -39,13 +42,20 @@ class PrintPairAnagram {
             j++;
         }
 
+        ArrayList<String> list = new ArrayList<>();
+
         for (int i =0 ; i<ar.length; i++){
+
             for (int k = i+1; k < ar.length; k++){
                 if (nAr[i].equals(nAr[k])){
-                    System.out.println(ar[i]+" , "+ar[k]);
+                    System.out.print(ar[i]+" , "+ar[k]);
+                    list.add(ar[i]);
+                    list.add(ar[j]);
                 }
             }
         }
+
+
         //System.out.print(nAr);
     }
 
